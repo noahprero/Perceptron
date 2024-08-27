@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptron</title>
+    <link rel="stylesheet" href="simple_perceptron.css">
+</head>
+<body>
+    <div id="menu">
+        <div id="epoch-count" class="menu-item">EPOCH: 0</div>
+        <div id="current-weights" class="menu-item"></div>
+        
+        <div class="menu-item" id="draw-toggles">
+            <div>
+                <label for="draw-labels">Draw labels</label>
+                <input type="radio" id="draw-labels" name="controls" value="labels" checked> 
+            </div>
+
+            <div>
+                <label for="draw-correct">Draw correctness</label>
+                <input type="radio" id="draw-correct" name="controls" value="correctness">
+            </div>
+        </div>
+
+        <div class="menu-item" id="learning-rate-container">
+            <label for="learning-rate" id="learning-rate-label">Learning rate: 0.0000001</label>
+            <input type="range" id="learning-rate" min="0" max="0.1" step="0.0000001" value="0.0000001">
+        </div>
+
+        <button onclick="update(10)" class="menu-item">Train for 10 iterations</button>
+    </div>
+
+    <div id="main-container">
+        <p id="instructions">Hold any key to start training</p>
+        <canvas id="canvas"></canvas>
+    </div>
+        
+
+    <script src="utils.js"></script>
+    <script src="Perceptron.js"></script>
+    <script src="simple_perceptron.js"></script>
+</body>
+</html>
