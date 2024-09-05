@@ -97,7 +97,6 @@ function labelPoint(point) {
 }
 
 
-
 let coeff = random(-1, 1);
 let constant = random(-100, 100);
 // Function of classifying line
